@@ -1,0 +1,6 @@
+query {
+  page: getHomepage {
+    title
+    contentHtml
+  }
+}

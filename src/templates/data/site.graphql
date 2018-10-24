@@ -1,0 +1,12 @@
+query {
+  social: getSocialSettings {
+    name
+    description
+    url
+    image {
+      s3Key
+    }
+    facebook
+    twitter
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image.html" import image %}
+
+{% block body_class %}body--homepage{% endblock %}
+
+{% block content %}
+  <div class="homepage">
+    <div class="homepage__inner">
+      <div class="homepage__content">
+        {{ page.contentHtml | safe }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

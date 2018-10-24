@@ -1,0 +1,46 @@
+.homepage {
+  @extend %basic-block;
+
+  &__inner {
+    @extend %container;
+  }
+
+  &__content {
+    margin: 15vh 0;
+
+    p {
+      color: #fff;
+      font-family: $poppins;
+      font-size: 6.4rem;
+      font-weight: -weight(bold);
+      line-height: 1.45;
+      max-width: 70vw;
+    }
+
+    a {
+      position: relative;
+      color: inherit;
+      white-space: nowrap;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0.4rem;
+        background-color: #fff;
+        transform: translateY(0.2rem);
+        will-change: transform;
+        transition: transform 0.12s $ease-in-out-cubic;
+      }
+
+      &:hover {
+        &:after {
+          transform: translateY(0.5rem);
+        }
+      }
+    }
+  }
+}
