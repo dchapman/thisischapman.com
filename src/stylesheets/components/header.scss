@@ -1,0 +1,23 @@
+.page-header {
+  position: fixed;
+  top: 4.8rem;
+  right: 4.8rem;
+
+  &__list {
+    li {
+      display: inline-block;
+
+      & + * {
+        margin-left: 2.4rem;
+      }
+    }
+
+    a {
+      color: -color(white);
+      font-family: $poppins;
+      font-size: 1.6rem;
+      font-weight: -weight(black);
+      text-transform: uppercase;
+    }
+  }
+}
