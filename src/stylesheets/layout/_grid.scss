@@ -6,13 +6,18 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
   max-width: 120rem;
 
   @include for-tablet-portrait-up {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  @include for-tablet-portrait-up {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   @include for-big-desktop-up {
