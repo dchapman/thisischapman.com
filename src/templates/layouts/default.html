@@ -24,13 +24,15 @@
         {% block content %}{% endblock %}
       </main>
 
-<!--      <keep-alive>
+      <!--<keep-alive>
         <studies v-if="studiesOpen"></studies>
       </keep-alive>-->
 
       {% block footer %}
         {% include "partials/footer.html" %}
       {% endblock %}
+
+      <gradient></gradient>
     </div>
 
     {% include "partials/scripts.html" %}

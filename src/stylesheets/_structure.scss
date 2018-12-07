@@ -28,6 +28,10 @@ body {
   overflow: hidden;
 }
 
+main {
+  z-index: -z(overlay);
+}
+
 html,
 body {
 }

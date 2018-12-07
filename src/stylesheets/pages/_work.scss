@@ -24,7 +24,6 @@
   overflow: hidden;
 
   &__background {
-    opacity: 0.8;
     img {
       @extend %cover-fill-image;
     }
@@ -38,6 +37,7 @@
     width: 20.4%;
     background-color: -color(white);
     z-index: -z(content);
+    opacity: 0;
   }
 
   &__heading {
