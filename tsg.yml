@@ -23,5 +23,17 @@ routes:
     template: pages/homepage.html
     context: data/homepage.graphql
 
+  work:
+    path: /work/
+    template: pages/work.html
+    context: data/work.graphql
+
+  study:
+    path: /study/:title/
+    template: pages/study.html
+    paginate:
+      data: data/study.graphql
+      itemName: page
+
 deploy:
   - ${buildPath}/static

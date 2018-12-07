@@ -1,0 +1,18 @@
+query {
+  getCaseStudyList {
+    total
+    items {
+      title
+      featureImage {
+        path
+      }
+      dek
+      stats {
+        client
+        role
+        agency
+      }
+      contentHtml
+    }
+  }
+}

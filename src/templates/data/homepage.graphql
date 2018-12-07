@@ -1,6 +1,9 @@
 query {
   page: getHomepage {
     title
+    avatar {
+      path
+    }
     contentHtml
   }
 }

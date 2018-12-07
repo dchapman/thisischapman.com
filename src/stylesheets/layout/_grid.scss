@@ -5,19 +5,18 @@
 %container {
   position: relative;
   width: 100%;
-  margin: 0 auto;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
-  max-width: 120rem;
+  max-width: 144rem;
 
   @include for-tablet-portrait-up {
-    padding-left: 4rem;
+    padding-left: 32rem;
     padding-right: 4rem;
   }
 
   @include for-tablet-portrait-up {
-    padding-left: 8rem;
     padding-right: 8rem;
+    margin-top: 12rem;
   }
 
   @include for-big-desktop-up {

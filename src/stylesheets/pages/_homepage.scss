@@ -6,8 +6,6 @@
   }
 
   &__content {
-    margin: 8vh 0;
-
     p {
       color: #fff;
       font-family: $poppins;
@@ -43,8 +41,6 @@
 
   @include for-tablet-portrait-up {
     &__content {
-      margin: 12vh 0;
-
       p {
         font-size: 2.8rem;
         max-width: 80vw;
@@ -58,8 +54,6 @@
 
   @include for-desktop-up {
     &__content {
-      margin: 20vh 0;
-
       p {
         font-size: 4rem;
         line-height: 1.44;

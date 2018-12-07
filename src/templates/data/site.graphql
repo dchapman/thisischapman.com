@@ -8,5 +8,17 @@ query {
     }
     facebook
     twitter
+  },
+  header: getHeader {
+    avatar {
+      asset {
+        path
+      }
+      alt
+    }
+    nav {
+      text
+      path
+    }
   }
 }

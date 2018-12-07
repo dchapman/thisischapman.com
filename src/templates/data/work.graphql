@@ -1,0 +1,10 @@
+query {
+  work: getCaseStudyList {
+    items {
+      title
+      featureImage {
+        path
+      }
+    }
+  }
+}

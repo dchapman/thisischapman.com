@@ -2,6 +2,7 @@
   position: fixed;
   top: 4.8rem;
   right: 4.8rem;
+  z-index: -z(header);
 
   &__list {
     li {
@@ -19,5 +20,26 @@
       font-weight: -weight(black);
       text-transform: uppercase;
     }
+  }
+}
+
+.logo {
+  display: none;
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.3rem solid -color(white);
+  box-shadow: 0 12px 0.8rem rgba(0,0,0,0.08);
+
+  @include for-tablet-portrait-up {
+    display: block;
+    top: 12rem;
+    left: 8rem;
+    width: 16rem;
+    height: 16rem;
+  }
+
+  img {
+    @extend %absolute-fill;
   }
 }

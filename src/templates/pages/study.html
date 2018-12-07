@@ -1,0 +1,58 @@
+{% extends "layouts/default.html" %}
+
+{% from "macros/image.html" import image %}
+
+{% block body_class %}body--work{% endblock %}
+
+{% block content %}
+<div class="hero">
+  <div class="hero__inner">
+    <div class="hero__background">
+      <img src="{{ page.featureImage | image }}" alt="{{ page.title }}"/>
+    </div>
+  </div>
+</div>
+
+<div class="study">
+  <div class="study__inner">
+
+    <div class="study__wrap">
+      <header class="study__header">
+        <div class="study__intro">
+          <h1 class="study__heading">{{ page.title }}</h1>
+
+          {% if page.dek %}
+          <p class="study__dek">{{ page.dek }}</p>
+          {% endif %}
+        </div>
+
+        {% if page.stats.client or page.stats.role or page.stats.agency %}
+        <ul class="study__stats">
+          {% if page.stats.client %}
+          <li>
+            <span class="study__stat" data-label="client">{{ page.stats.client }}</span>
+          </li>
+          {% endif %}
+
+          {% if page.stats.role %}
+          <li>
+            <span class="study__stat" data-label="role">{{ page.stats.role }}</span>
+          </li>
+          {% endif %}
+
+          {% if page.stats.agency %}
+          <li>
+            <span class="study__stat" data-label="agency">{{ page.stats.agency }}</span>
+          </li>
+          {% endif %}
+        </ul>
+        {% endif %}
+      </header>
+
+      <div class="study__content">
+        {{ page.contentHtml | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,132 @@
+.hero {
+  display: block;
+  position: relative;
+  z-index: -z(content);
+
+  &__inner {
+    @extend %container;
+
+    margin-top: 12rem;
+  }
+
+  &__background {
+    @include ratio-box(56.25%);
+
+    width: calc(100vw - 32rem);
+  }
+}
+
+
+.study {
+  @extend %basic-block;
+
+  background-color: #f5f5f5;
+  margin-top: -8rem;
+
+  &__inner {
+    @extend %container;
+
+    margin-top: 0;
+  }
+
+  &__header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+    background-color: -color(white);
+    padding: 14.4rem 0 8rem;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background-color: -color(white);
+      width: 100vw;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+    }
+  }
+
+  &__heading {
+    font-family: $poppins;
+    font-size: 4.8rem;
+    color: #111;
+    font-weight: -weight(bold);
+  }
+
+  &__dek {
+    margin-top: 2.4rem;
+    font-family: $poppins;
+    font-size: 2.4rem;
+    color: #111;
+    line-height: 1.33;
+  }
+
+  &__stats {
+    flex: 0 0 40rem;
+    padding-left: 4rem;
+
+    li {
+      display: block;
+
+      & + * {
+        margin-top: 1.6rem;
+        padding-top: 1.6rem;
+        border-top: 1px solid #d9d9d9;
+      }
+    }
+  }
+
+  &__stat {
+    font-family: $poppins;
+    font-size: 2rem;
+    font-weight: -weight(semi-bold);
+    line-height: 1.33;
+
+    &:before {
+      content: attr(data-label);
+      display: block;
+      margin-bottom: 0.2rem;
+      font-weight: -weight(regular);
+    }
+  }
+
+  &__content {
+    color: #111;
+    font-family: $poppins;
+    padding-bottom: 12rem;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: -weight(semi-bold);
+      line-height: 1.22;
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 1.55;
+      max-width: 780px;
+
+      & + * {
+        margin-top: 8rem;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    figure {
+      margin: 8rem auto;
+    }
+  }
+}
