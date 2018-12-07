@@ -8,15 +8,17 @@
   padding-left: 2.4rem;
   padding-right: 2.4rem;
   max-width: 144rem;
+  margin-top: 6.4rem;
 
   @include for-tablet-portrait-up {
-    padding-left: 32rem;
+    padding-left: 4rem;
     padding-right: 4rem;
+    margin-top: 12rem;
   }
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
+    padding-left: 32rem;
     padding-right: 8rem;
-    margin-top: 12rem;
   }
 
   @include for-big-desktop-up {

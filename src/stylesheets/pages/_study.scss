@@ -68,7 +68,7 @@
     font-family: $poppins;
     font-size: 2.4rem;
     color: #111;
-    line-height: 1.33;
+    line-height: 1.44;
   }
 
   &__stats {
@@ -105,8 +105,16 @@
     font-family: $poppins;
     padding-bottom: 12rem;
 
+    h2 {
+      font-size: 3.2rem;
+      margin-bottom: 1.6rem;
+      font-weight: -weight(bold);
+      line-height: 1.18;
+    }
+
     h3 {
       font-size: 2.4rem;
+      margin-bottom: 0.8rem;
       font-weight: -weight(semi-bold);
       line-height: 1.22;
     }

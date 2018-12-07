@@ -1,6 +1,6 @@
 query {
-  work: getCaseStudyList {
-    items {
+  page: getWork {
+    featuredStudies {
       title
       featureImage {
         path

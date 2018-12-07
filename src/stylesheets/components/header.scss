@@ -34,7 +34,7 @@
     transition: transform 0.1s $ease-in-out-cubic, box-shadow 0.1s $ease-out-circ;
   }
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     display: block;
     position: fixed;
     top: 12rem;
@@ -69,6 +69,7 @@
       transform: scale(0.9) rotate(-5deg);
       will-change: transform;
       transition: transform 0.15s $ease-in-out-cubic;
+      box-shadow: 0 0.8rem 0.8rem rgba(0,0,0,0.04);
 
       &:hover {
         color: #111;
@@ -86,10 +87,6 @@
             border-right-color: #fff;
           }
         }
-      }
-
-      &:active {
-        transform: scale(0.7);
       }
 
       &:after {
