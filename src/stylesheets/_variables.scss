@@ -26,6 +26,7 @@ $colors: (
   dust: #959595,
   silver: #acacac,
   white: #ffffff,
+  windsor: #3C0B5A,
   cerise: #D13B82,
   ribbon: #f70953,
   jackson: #17206F,
@@ -62,4 +63,4 @@ $layers: (
   modal
 );
 
-$gradient: linear-gradient(125deg, -color(jackson) 0%, -color(rico) 100%);
+$gradient: linear-gradient(125deg, -color(jackson) 0%, -color(windsor) 100%);
