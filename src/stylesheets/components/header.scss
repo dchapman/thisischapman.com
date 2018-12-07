@@ -1,38 +1,13 @@
-.page-header {
-  position: fixed;
-  top: 4.8rem;
-  right: 4.8rem;
-  z-index: -z(header);
-
-  &__list {
-    li {
-      display: inline-block;
-
-      & + * {
-        margin-left: 2.4rem;
-      }
-    }
-
-    a {
-      color: -color(white);
-      font-family: $poppins;
-      font-size: 1.6rem;
-      font-weight: -weight(black);
-      text-transform: uppercase;
-    }
-  }
-}
-
-.logo {
+.avatar {
   display: none;
-  position: fixed;
   border-radius: 50%;
   overflow: hidden;
-  border: 0.3rem solid -color(white);
   box-shadow: 0 12px 0.8rem rgba(0,0,0,0.08);
+  z-index: -z(header);
 
   @include for-tablet-portrait-up {
     display: block;
+    position: fixed;
     top: 12rem;
     left: 8rem;
     width: 16rem;

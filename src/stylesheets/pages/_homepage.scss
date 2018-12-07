@@ -1,6 +1,8 @@
 .homepage {
   @extend %basic-block;
 
+  padding-bottom: 12rem;
+
   &__inner {
     @extend %container;
   }
@@ -10,7 +12,7 @@
       color: #fff;
       font-family: $poppins;
       font-size: 2rem;
-      font-weight: -weight(semi-bold);
+      font-weight: -weight(regular);
       line-height: 1.55;
       max-width: 90vw;
     }
@@ -56,10 +58,11 @@
     &__content {
       p {
         font-size: 4rem;
-        line-height: 1.44;
+        line-height: 1.34;
       }
 
       a {
+        font-weight: -weight(semi-bold);
         &:after {
           height: 0.4rem;
           transform: translateY(0.2rem);

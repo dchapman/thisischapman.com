@@ -28,7 +28,10 @@ $colors: (
   white: #ffffff,
   cerise: #D13B82,
   ribbon: #f70953,
-  governor: #2D40BE
+  jackson: #17206F,
+  governor: #2D40BE,
+  pelorous: #3AACBE,
+  rico: #3ABEB8
 );
 
 // fonts
@@ -59,4 +62,4 @@ $layers: (
   modal
 );
 
-$pink-gradient: linear-gradient(135deg, -color(ribbon) 0%, -color(cerise) 100%);
+$gradient: linear-gradient(125deg, -color(jackson) 0%, -color(rico) 100%);

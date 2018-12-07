@@ -6,7 +6,7 @@ html {
 
 body {
   font-size: 1rem;
-  background: $pink-gradient;
+  background: $gradient;
 
   @include for-tablet-landscape-up {
     &:before {
