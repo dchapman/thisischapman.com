@@ -26,7 +26,8 @@ $colors: (
   dust: #959595,
   silver: #acacac,
   white: #ffffff,
-  cerise: #D13B82
+  cerise: #D13B82,
+  ribbon: #f70953
 );
 
 // fonts
@@ -56,3 +57,5 @@ $layers: (
   overlay,
   modal
 );
+
+$pink-gradient: linear-gradient(135deg, -color(ribbon) 0%, -color(cerise) 100%);

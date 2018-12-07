@@ -6,16 +6,16 @@
 
     {# Favicons from Webpack favicon generator #}
     {% for element in global.favicon.html %}
-      {{ element | replace('/favicon-', '/assets/favicon-') | safe }}
+      {{ element | replace('/shortcut-', '/assets/shortcut-') | safe }}
     {% endfor %}
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
 
   </head>
   <body class="{% block body_class %}body{% endblock %}">
     {% include "partials/scripts-body.html" %}
 
-    <div class="wrapper">
+    <div class="wrapper" id="app">
       {% block header %}
         {% include "partials/header.html" %}
       {% endblock %}
@@ -23,6 +23,10 @@
       <main class="main">
         {% block content %}{% endblock %}
       </main>
+
+      <keep-alive>
+        <studies v-if="studiesOpen"></studies>
+      </keep-alive>
 
       {% block footer %}
         {% include "partials/footer.html" %}
