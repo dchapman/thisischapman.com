@@ -1,20 +1,134 @@
 .avatar {
+  position: relative;
   display: none;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 12px 0.8rem rgba(0,0,0,0.08);
   z-index: -z(header);
+  will-change: transform;
+  transition: transform 0.2s $ease-in-out-cubic;
+
+  &:hover {
+    transform: scale(1.06);
+
+    .avatar__circle {
+      transform: rotate(20deg);
+      box-shadow: 0 2.4rem 1.6rem rgba(0,0,0,0.06);
+    }
+
+    .avatar__bubbles {
+      opacity: 1;
+      visibility: visible;
+
+      a {
+        transform: scale(1) rotate(0deg);
+        transition: transform 0.15s $ease-in-out-cubic, opacity 0.1s $ease-in-out-cubic, visibility 0 0;
+      }
+    }
+  }
+
+  &__circle {
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 1.2rem 0.8rem rgba(0,0,0,0.08);
+    will-change: transform;
+    transition: transform 0.1s $ease-in-out-cubic, box-shadow 0.1s $ease-out-circ;
+  }
 
   @include for-tablet-portrait-up {
     display: block;
     position: fixed;
     top: 12rem;
     left: 8rem;
-    width: 16rem;
-    height: 16rem;
+
+    &__circle {
+      width: 16rem;
+      height: 16rem;
+    }
   }
 
   img {
     @extend %absolute-fill;
+  }
+
+  &__bubbles {
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, visibility;
+    transition: opacity 0.1s $ease-in-out-cubic, visibility 0 0.15s;
+
+    a {
+      position: absolute;
+      background: #111;
+      border-radius: 1.6rem;
+      padding: 1.6rem 2.4rem;
+      font-weight: -weight(semi-bold);
+      color: #fff;
+      font-size: 1.8rem;
+      font-family: $poppins;
+      white-space: nowrap;
+      transform: scale(0.9) rotate(-5deg);
+      will-change: transform;
+      transition: transform 0.15s $ease-in-out-cubic;
+
+      &:hover {
+        color: #111;
+        background-color: -color(white);
+        transform: scale(1.2);
+
+        &:nth-child(1) {
+          &:after {
+            border-bottom-color: #fff;
+          }
+        }
+
+        &:nth-child(2) {
+          &:after {
+            border-right-color: #fff;
+          }
+        }
+      }
+
+      &:active {
+        transform: scale(0.7);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 1.2rem solid transparent;
+      }
+
+      &:nth-child(1) {
+        right: 0;
+        bottom: -4rem;
+
+        &:after {
+          top: 0;
+          left: 50%;
+          border-bottom-color: #111;
+          border-top: 0;
+          border-left: 0;
+          margin-left: -0.5rem;
+          margin-top: -1rem;
+        }
+      }
+
+      &:nth-child(2) {
+        left: 14rem;
+        top: 50%;
+
+        &:after {
+          left: 0;
+          top: 50%;
+          border-right-color: #111;
+          border-left: 0;
+          border-bottom: 0;
+          margin-top: -0.5rem;
+          margin-left: -1rem;
+        }
+      }
+    }
   }
 }

@@ -55,35 +55,50 @@
     &:after {
       transform: translateX(-50%) translateY(1.6rem);
     }
+
+    .tout__content {
+      transform: scaleX(1);
+      box-shadow: 10px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .tout__heading {
+      transform: translateX(0);
+    }
   }
 
   &__background {
     background-color: -color(jackson);
+
     img {
       @extend %cover-fill-image;
     }
   }
 
   &__content {
+    overflow: hidden;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    height: 100%;
-    width: 20.4%;
+    padding: 1.6rem 3.2rem;
     z-index: -z(content);
-    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    background-color: #fff;
+    box-shadow: 0 0 0 rgba(0,0,0,0.2);
+    will-change: transform, box-shadow;
+    transition: transform 0.2s $ease-out-circ 0.1s, box-shadow 0.15s $ease-out-circ 0.1s;
   }
 
   &__heading {
-    position: absolute;
     display: inline-block;
     white-space: nowrap;
-    bottom: 4rem;
-    left: 4rem;
     color: #111;
     font-family: $poppins;
-    font-size: 4.8rem;
+    font-size: 2.4rem;
     font-weight: -weight(bold);
     z-index: -z(content);
+    transform: translateX(-300%);
+    will-change: transform;
+    transition: transform 0.2s $ease-out-cubic 0.1s;
   }
 }
