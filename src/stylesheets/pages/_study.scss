@@ -16,7 +16,6 @@
   }
 }
 
-
 .study {
   @extend %basic-block;
 
@@ -95,8 +94,13 @@
     &:before {
       content: attr(data-label);
       display: block;
+      color: #111;
       margin-bottom: 0.2rem;
       font-weight: -weight(regular);
+    }
+
+    &--link {
+      color: -color(ribbon);
     }
   }
 

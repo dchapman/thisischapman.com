@@ -30,7 +30,11 @@
         <ul class="study__stats">
           {% if page.stats.client %}
           <li>
+            {% if page.stats.url %}
+            <a href="{{ page.stats.url }}" class="study__stat study__stat--link" target="_blank" data-label="client" >{{ page.stats.client }}</a>
+            {% else %}
             <span class="study__stat" data-label="client">{{ page.stats.client }}</span>
+            {% endif %}
           </li>
           {% endif %}
 

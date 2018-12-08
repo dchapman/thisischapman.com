@@ -9,6 +9,7 @@ query {
       dek
       stats {
         client
+        url
         role
         agency
       }
