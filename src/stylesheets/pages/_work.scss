@@ -20,11 +20,6 @@
   }
 
   @include for-tablet-landscape-up {
-    .tout {
-      will-change: opacity;
-      transition: opacity 0.18s $ease-out-circ;
-    }
-
     li {
       & + * {
         margin-top: 2.4rem;
@@ -85,6 +80,8 @@
   }
 
   @include for-tablet-landscape-up {
+    transition: transform 0.15s $ease-in-out-cubic, opacity 0.15s $ease-in-out-cubic;
+
     &__content {
       top: auto;
       bottom: 0;
@@ -106,7 +103,7 @@
     }
 
     &:hover {
-      transform: translateY(-1.6rem) scale(1.02);
+      transform: translateY(-1.6rem) scale(1.04);
       opacity: 1 !important;
 
       &:after {

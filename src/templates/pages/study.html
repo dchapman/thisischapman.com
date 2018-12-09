@@ -23,9 +23,10 @@
             {{ page.title }}
 
             {% if page.projectUrl %}
-            <a href="{{ page.projectUrl }}">
+            <a href="{{ page.projectUrl }}" target="_blank">
               <span>{% include "vectors/external.svg" %}</span>
             </a>
+            
             {% endif %}
           </h1>
 

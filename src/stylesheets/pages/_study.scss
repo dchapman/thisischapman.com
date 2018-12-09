@@ -13,6 +13,13 @@
   &__background {
     @include ratio-box(56.25%);
   }
+
+  @include for-tablet-landscape-up {
+    &__background {
+      width: calc(100vw - 32rem);
+      max-width: 140rem;
+    }
+  }
 }
 
 .study {
@@ -55,15 +62,15 @@
   &__heading {
     color: #111;
     font-family: $poppins;
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: -weight(bold);
     line-height: 5.4rem;
 
     a {
       position: relative;
       display: inline-block;
-      margin-left: 1.6rem;
-      top: -0.6rem;
+      margin-left: 0.8rem;
+      top: 0;
       z-index: -z(content);
 
       &:before {
@@ -231,8 +238,13 @@
   }
 
   @include for-tablet-landscape-up {
-    &__background {
-      width: calc(100vw - 32rem);
+    &__heading {
+      font-size: 4rem;
+
+      a {
+        top: -0.6rem;
+        margin-left: 1.6rem;
+      }
     }
 
     &__content {
