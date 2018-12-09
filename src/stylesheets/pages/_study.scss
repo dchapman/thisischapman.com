@@ -2,6 +2,7 @@
   display: block;
   position: relative;
   z-index: -z(content);
+  user-select: none;
 
   &__inner {
     @extend %container;
@@ -208,7 +209,7 @@
       max-width: 780px;
 
       & + * {
-        margin-top: 8rem;
+        margin-top: 5.6rem;
       }
     }
 
@@ -217,7 +218,7 @@
     }
 
     figure, .oembed {
-      margin: 8rem auto 8rem 0;
+      margin: 5.6rem auto 5.6rem 0;
     }
 
     .oembed {
@@ -232,6 +233,18 @@
   @include for-tablet-landscape-up {
     &__background {
       width: calc(100vw - 32rem);
+    }
+
+    &__content {
+      p {
+        & + * {
+          margin-top: 8rem;
+        }
+      }
+
+      figure, .oembed {
+        margin: 8rem auto 8rem 0;
+      }
     }
   }
 
