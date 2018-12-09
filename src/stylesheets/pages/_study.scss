@@ -12,6 +12,9 @@
 
   &__background {
     @include ratio-box(56.25%);
+
+    background-color: -color(jackson);
+    overflow: hidden;
   }
 
   @include for-tablet-landscape-up {

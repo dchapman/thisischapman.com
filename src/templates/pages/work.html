@@ -11,7 +11,7 @@
       {% for study in page.featuredStudies %}
       <li>
         <a href="{{ study | route('study') }}" class="tout">
-          <div class="tout__background"><img src="{{ study.featureImage | image }}" alt="{{ study.title }}}" /></div>
+          <div class="tout__background"><img src="{{ study.featureImage | image }}" alt="{{ study.title }}}" v-imageloaded data-image /></div>
 
           <div class="tout__content">
             <h2 class="tout__heading">{{ study.title }}</h2>
