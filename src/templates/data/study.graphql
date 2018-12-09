@@ -3,13 +3,14 @@ query {
     total
     items {
       title
+      projectUrl
       featureImage {
         path
       }
       dek
       stats {
         client
-        url
+        clientUrl
         role
         agency
       }

@@ -56,10 +56,61 @@
   }
 
   &__heading {
+    color: #111;
     font-family: $poppins;
     font-size: 4.8rem;
-    color: #111;
     font-weight: -weight(bold);
+    line-height: 5.4rem;
+
+    a {
+      position: relative;
+      display: inline-block;
+      margin-left: 1.6rem;
+      top: -0.6rem;
+      z-index: -z(content);
+
+      &:before {
+        content: "";
+        display: block;
+        width: 6.4rem;
+        height: 6.4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: -color(ribbon);
+        border-radius: 50%;
+        z-index: -1;
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+        opacity: 0;
+        visibility: hidden;
+        will-change: opacity, visibility, transform;
+        transition: opacity 0.12s $ease-in-cubic, visibility 0s 0.15s, transform 0.08s $ease-in-out-cubic;
+      }
+
+      &:hover {
+        &:before {
+          transform: translateX(-50%) translateY(-50%) scale(1);
+          opacity: 1;
+          visibility: visible;
+          transition: opacity 0.12s $ease-in-out-cubic, visibility 0s 0s, transform 0.08s $ease-in-out-cubic;
+        }
+
+        svg {
+          fill: -color(white);
+        }
+      }
+
+      span {
+        display: block;
+        position: relative;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        svg {
+          @extend %absolute-fill;
+        }
+      }
+    }
   }
 
   &__dek {
@@ -100,7 +151,33 @@
     }
 
     &--link {
-      color: -color(ribbon);
+      color: initial;
+      will-change: color;
+      transition: color 0.1s $ease-in-out-cubic;
+
+      span {
+        display: inline-block;
+        position: relative;
+        margin-left: 0.4rem;
+        width: 1.4rem;
+        height: 1.4rem;
+
+        svg {
+          @extend %absolute-fill;
+
+          fill: #111;
+          will-change: fill;
+          transition: fill 0.1s $ease-in-out-cubic;
+        }
+      }
+
+      &:hover {
+        color: -color(ribbon);
+
+        svg {
+          fill: -color(ribbon);
+        }
+      }
     }
   }
 
@@ -121,6 +198,13 @@
       margin-bottom: 0.8rem;
       font-weight: -weight(semi-bold);
       line-height: 1.22;
+    }
+
+    h1, h2, h3 {
+      & + figure,
+      & + .oembed {
+        margin-top: 4rem;
+      }
     }
 
     p {

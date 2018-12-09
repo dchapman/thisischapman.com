@@ -19,7 +19,15 @@
     <div class="study__wrap">
       <header class="study__header">
         <div class="study__intro">
-          <h1 class="study__heading">{{ page.title }}</h1>
+          <h1 class="study__heading">
+            {{ page.title }}
+
+            {% if page.projectUrl %}
+            <a href="{{ page.projectUrl }}">
+              <span>{% include "vectors/external.svg" %}</span>
+            </a>
+            {% endif %}
+          </h1>
 
           {% if page.dek %}
           <p class="study__dek">{{ page.dek }}</p>
@@ -30,8 +38,12 @@
         <ul class="study__stats">
           {% if page.stats.client %}
           <li>
-            {% if page.stats.url %}
-            <a href="{{ page.stats.url }}" class="study__stat study__stat--link" target="_blank" data-label="client" >{{ page.stats.client }}</a>
+            {% if page.stats.clientUrl %}
+            <a href="{{ page.stats.clientUrl }}" class="study__stat study__stat--link" target="_blank" data-label="client" >
+              {{ page.stats.client }}
+
+              <span>{% include "vectors/external.svg" %}</span>
+            </a>
             {% else %}
             <span class="study__stat" data-label="client">{{ page.stats.client }}</span>
             {% endif %}
