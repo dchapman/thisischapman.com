@@ -11,8 +11,6 @@
 
   &__background {
     @include ratio-box(56.25%);
-
-    width: calc(100vw - 32rem);
   }
 }
 
@@ -29,9 +27,7 @@
   }
 
   &__header {
-    display: flex;
     position: relative;
-    justify-content: space-between;
     margin-bottom: 12rem;
     background-color: -color(white);
     padding: 14.4rem 0 8rem;
@@ -58,7 +54,7 @@
   &__heading {
     color: #111;
     font-family: $poppins;
-    font-size: 4.8rem;
+    font-size: 4rem;
     font-weight: -weight(bold);
     line-height: 5.4rem;
 
@@ -84,7 +80,7 @@
         opacity: 0;
         visibility: hidden;
         will-change: opacity, visibility, transform;
-        transition: opacity 0.12s $ease-in-cubic, visibility 0s 0.15s, transform 0.08s $ease-in-out-cubic;
+        transition: opacity 0.06s $ease-in-cubic, visibility 0s 0.06s, transform 0.06s $ease-in-out-cubic;
       }
 
       &:hover {
@@ -122,8 +118,7 @@
   }
 
   &__stats {
-    flex: 0 0 40rem;
-    padding-left: 4rem;
+    margin-top: 4.8rem;
 
     li {
       display: block;
@@ -231,6 +226,29 @@
       background-color: #fff;
       width: 100%;
       max-width: 80rem;
+    }
+  }
+
+  @include for-tablet-landscape-up {
+    &__background {
+      width: calc(100vw - 32rem);
+    }
+  }
+
+  @include for-desktop-up {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__heading {
+      font-size: 4.8rem;
+    }
+
+    &__stats {
+      flex: 0 0 40rem;
+      padding-left: 4rem;
+      margin-top: 0;
     }
   }
 }

@@ -9,7 +9,7 @@
   <div class="case-studies__inner">
     <ul class="case-studies__list">
       {% for study in page.featuredStudies %}
-      <li class="tout">
+      <li>
         <a href="{{ study | route('study') }}" class="tout">
           <div class="tout__background"><img src="{{ study.featureImage | image }}" alt="{{ study.title }}}" /></div>
 
