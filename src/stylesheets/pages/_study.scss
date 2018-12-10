@@ -67,7 +67,7 @@
     font-family: $poppins;
     font-size: 3.2rem;
     font-weight: -weight(bold);
-    line-height: 5.4rem;
+    line-height: 4.4rem;
 
     a {
       position: relative;
@@ -243,6 +243,7 @@
   @include for-tablet-landscape-up {
     &__heading {
       font-size: 4rem;
+      line-height: 5.4rem;
 
       a {
         top: -0.6rem;

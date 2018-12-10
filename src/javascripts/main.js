@@ -3,7 +3,7 @@ import objectFitImages from 'object-fit-images';
 import Vue from 'vue';
 
 import Gradient from './components/gradient.vue';
-import Studies from './components/studies.vue';
+import Studies from './components/studies';
 
 import Imageloaded from './directives/imageloaded';
 

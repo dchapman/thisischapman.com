@@ -5,21 +5,23 @@
 {% block body_class %}body--work{% endblock %}
 
 {% block content %}
-<div class="case-studies">
-  <div class="case-studies__inner">
-    <ul class="case-studies__list">
-      {% for study in page.featuredStudies %}
-      <li>
-        <a href="{{ study | route('study') }}" class="tout">
-          <div class="tout__background"><img src="{{ study.featureImage | image }}" alt="{{ study.title }}}" v-imageloaded data-image /></div>
+<studies inline-template>
+  <div class="case-studies">
+    <div class="case-studies__inner">
+      <ul class="case-studies__list">
+        {% for study in page.featuredStudies %}
+        <li>
+          <a href="{{ study | route('study') }}" class="tout">
+            <div class="tout__background"><img src="{{ study.featureImage | image }}" alt="{{ study.title }}}" v-imageloaded data-image /></div>
 
-          <div class="tout__content">
-            <h2 class="tout__heading">{{ study.title }}</h2>
-          </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+            <div class="tout__content">
+              <h2 class="tout__heading">{{ study.title }}</h2>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-</div>
+</studies>
 {% endblock %}

@@ -1,5 +1,5 @@
 .case-studies {
-  padding-bottom: 12rem;
+  padding-bottom: 50vh;
 
   &__inner {
     @extend %container;
@@ -14,23 +14,23 @@
 
     li {
       & + * {
-        margin-top: 1.6rem;
+        margin-top: 2.4rem;
       }
     }
   }
 
   @include for-tablet-landscape-up {
+    padding-bottom: 40vh;
+
     li {
       & + * {
-        margin-top: 2.4rem;
+        margin-top: 4rem;
       }
     }
+  }
 
-    &:hover {
-      .tout {
-        opacity: 0.8;
-      }
-    }
+  @include for-desktop-up {
+    padding-bottom: 12rem;
   }
 }
 
@@ -65,7 +65,7 @@
     bottom: 0;
     width: auto !important;
     height: auto !important;
-    padding: 1.6rem 3.2rem;
+    padding: 1.6rem 2.4rem;
     z-index: -z(content);
     background-color: #fff;
     user-select: none;
@@ -132,4 +132,29 @@
       }
     }
   }
+}
+
+.tps-section {
+  width: 100%;
+  height: auto;
+  -webkit-perspective: 100em;
+  -moz-perspective: 100em;
+  -ms-perspective: 100em;
+  -o-perspective: 100em;
+  perspective: 100em;
+  -webkit-perspective-origin: center bottom;
+  -moz-perspective-origin: center bottom;
+  -ms-perspective-origin: center bottom;
+  -o-perspective-origin: center bottom;
+  perspective-origin: center bottom;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
