@@ -292,7 +292,7 @@
     p {
       font-size: 2rem;
       line-height: 1.55;
-      max-width: 780px;
+      max-width: 78rem;
 
       & + * {
         margin-top: 5.6rem;
@@ -305,6 +305,10 @@
 
     figure, .oembed {
       margin: 5.6rem auto 5.6rem 0;
+
+      &.small {
+        max-width: 78rem;
+      }
     }
 
     .oembed {
@@ -328,12 +332,12 @@
     &__content {
       p {
         & + * {
-          margin-top: 6.4rem;
+          margin-top: 4.8rem;
         }
       }
 
       figure, .oembed {
-        margin: 8rem auto 8rem 0;
+        margin: 6.4rem auto 6.4rem 0;
       }
     }
   }
