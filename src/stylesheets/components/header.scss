@@ -58,6 +58,11 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
 
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
     &:after {
       content: '';
       position: absolute;

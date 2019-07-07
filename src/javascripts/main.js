@@ -2,6 +2,7 @@ import objectFitImages from 'object-fit-images';
 
 import Vue from 'vue';
 
+import Avatar from './components/avatar';
 import Gradient from './components/gradient.vue';
 import Studies from './components/studies';
 
@@ -27,6 +28,7 @@ export default new Vue({
     }
   },
   components: {
+    Avatar,
     Gradient,
     Studies
   },

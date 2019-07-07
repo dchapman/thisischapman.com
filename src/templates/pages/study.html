@@ -7,6 +7,17 @@
 {% block content %}
 <div class="hero">
   <div class="hero__inner">
+    <h1 class="hero__heading">
+      {{ page.title }}
+
+      {% if page.projectUrl %}
+      <a href="{{ page.projectUrl }}" target="_blank">
+        <span>{% include "vectors/external.svg" %}</span>
+      </a>
+
+      {% endif %}
+    </h1>
+
     <div class="hero__background">
       <img src="{{ page.featureImage | image }}" alt="{{ page.title }}" v-imageloaded data-image />
     </div>
@@ -71,4 +82,16 @@
     </div>
   </div>
 </div>
+
+{% if page.nextStudy %}
+<a href="{{ page.nextStudy | route('study') }}" class="next-study">
+  <div class="next-study__inner">
+    <div class="next-study__background">
+      <img src="{{ page.nextStudy.featureImage | image }}" alt="{{ page.nextStudy.title }}" v-imageloaded data-image />
+    </div>
+
+    <h2 class="next-study__title">{{ page.nextStudy.title }}</h2>
+  </div>
+</a>
+{% endif %}
 {% endblock %}
