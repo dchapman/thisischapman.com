@@ -297,6 +297,16 @@
       & + * {
         margin-top: 5.6rem;
       }
+
+      a {
+        color: -color(ribbon);
+        will-change: color;
+        transition: color 0.1s $ease-out-quint;
+
+        &:hover {
+          color: -color(windsor);
+        }
+      }
     }
 
     img {
